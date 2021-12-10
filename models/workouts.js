@@ -21,6 +21,7 @@ const workoutSchema = new Schema({
         },
         duration: {
           type: Number,
+          required: true
         }, 
         weight: {
           type: Number,
@@ -32,9 +33,6 @@ const workoutSchema = new Schema({
         sets: {
           type: Number
         },
-        duration: {
-          type: Number
-        },
         distance: {
           type: Number
         },
@@ -43,6 +41,6 @@ const workoutSchema = new Schema({
 });
 
 
-const Workout = mongoose.model("Workout", workoutSchema);
+const Workout = mongoose.model("workouts", workoutSchema);
 
 module.exports = Workout;
